@@ -1,0 +1,17 @@
+    <div class="card card-body text-center">
+        <h1>Chat Client</h1>
+        Emojis are supported. EX: :smile:
+    </div>
+    <div>
+        <div class="pre-scrollable"> 
+            <table class="table table-striped table-hover table-sm" style="word-break: break-all">
+                <tr data-ng-repeat="mes in messages | orderBy:added_date:sortReverse" class="card">
+                    <td class="card-body"><strong class="text-capitalize">{{mes.user}}</strong>: {{mes.message}}<span class="float-right">{{mes.added_date | date : "shortTime" }}</span></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <input type="text" data-ng-keypress="check($event)" class="form-control" data-ng-model="message" name="message">
+        </div>
+
+    </div>
