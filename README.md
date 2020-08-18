@@ -10,7 +10,9 @@ This was tested with mongoDB version 2.4.14. That is the latest available for a 
 
 ## How to install
 git clone https://github.com/lashower/talker.git
+
 npm install
+
 node server.js
 
 ## How do messages work?
